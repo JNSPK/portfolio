@@ -30,6 +30,9 @@
     left: 0px;
     z-index: -1;
   }
+  .mobile-burger {
+    display: none;
+  }
 }
 .logo-header {
   display: flex;
@@ -99,5 +102,83 @@
       height: 2rem;
       object-fit: cover;
     }
+  }
+}
+
+@media (max-width: $layout-bp-small) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+    height: 10vh;
+    transition: all 1s ease;
+    background-color: rgba(0, 0, 0, 0.504);
+    &.header::before {
+      content: '';
+      background-image: none;
+    }
+    .navbar.inactive {
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      justify-content: center;
+      right: 0;
+      top: -100vh;
+      width: 100vw;
+      z-index: 3;
+      opacity: 0 {
+        font-size: 5vw;
+        height: auto;
+      }
+    }
+    .navbar.active {
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      justify-content: center;
+      right: 0;
+      width: 100vw;
+      opacity: 1;
+      transition: all 1.5s ease-in-out;
+    }
+    .mobile-burger {
+      height: 3rem;
+      width: 3rem;
+      display: flex;
+      position: fixed;
+      z-index: 4;
+      top: 1rem;
+      right: 2rem;
+      background: transparent;
+      border: none;
+      background-image: url('../img/burger.png');
+      background-size: cover;
+    }
+    .mobile-burger:hover {
+      cursor: pointer;
+      background-image: url('../img/selectedBurger.png');
+      background-size: cover;
+    }
+    .logo-header {
+      display: flex;
+      position: absolute;
+      top: 1rem;
+      padding-left: 0;
+      .name-header {
+        font-family: Jonathan Hetegral;
+        color: white;
+        font-size: 2rem;
+      }
+    }
+  }
+  .header.inactive {
+    transition: background-color 1.3s ease-in-out height 1s ease-in-out;
+  }
+  .header.active {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.633);
+    transition: background-color 1.3s ease-in-out height 1s ease-in-out;
   }
 }

@@ -1,15 +1,23 @@
 import '../styles/nav.scss';
 import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
 import github from '../img/github.png';
 import linkedin from '../img/linkedin.png';
 
 const Nav = () => {
+  const [showNav, setShowNav] = useState(false);
+
+  const handleShowNav = () => {
+    setShowNav(!showNav);
+  };
+
   return (
-    <header className='header'>
+    <header className={`header ${showNav ? 'active' : 'inactive'}`}>
       <section className='logo-header'>
         <p className='name-header'>Johan Nilsson</p>
       </section>
-      <nav className='navbar'>
+      <button className='mobile-burger' onClick={handleShowNav}></button>
+      <nav className={`navbar ${showNav ? 'active' : 'inactive'}`}>
         <NavLink
           to='/'
           className={({ isActive, isPending }) =>

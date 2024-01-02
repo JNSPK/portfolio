@@ -54,3 +54,20 @@
     }
   }
 }
+@media (max-width: $layout-bp-small) {
+  .apropos-container {
+    .apropos {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      width: 90%;
+
+      .pp {
+        height: 25rem;
+      }
+    }
+    .apropos-description {
+      line-height: 1.8rem;
+    }
+  }
+}

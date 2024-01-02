@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import '../styles/stack-card.scss';
 
 const getColorClass = (tag) => {
