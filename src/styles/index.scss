@@ -1,0 +1,25 @@
+@import './settings.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $titleFont;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url('../img/marbre-noir.jpg');
+  background-size: cover;
+  min-height: 100svh;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+  grid-template-areas:
+    'header'
+    'main';
+  min-height: 100svh;
+}

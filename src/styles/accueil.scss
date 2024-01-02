@@ -1,0 +1,12 @@
+@import './settings.scss';
+
+.accueil {
+  grid-area: main;
+  height: 100%;
+  .container {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+  }
+}
