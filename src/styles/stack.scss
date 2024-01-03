@@ -5,9 +5,25 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   width: 100%;
+  max-width: 100rem;
   justify-items: center;
   align-items: center;
   justify-self: center;
   column-gap: 1rem;
-  padding: 2rem 10rem;
+  row-gap: 1rem;
+  padding: 2rem 2rem;
+}
+@media (max-width: $layout-bp-small) {
+  .stack-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    padding: 2rem 2rem;
+  }
+}
+
+@media (max-width: $layout-bp-xsmall) {
+  .stack-container {
+    grid-template-columns: 1fr;
+  }
 }

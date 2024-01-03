@@ -68,3 +68,9 @@
     filter: grayscale(0%);
   }
 }
+
+@media (max-width: $layout-bp-small) {
+  .projet-card {
+    height: 30rem;
+  }
+}

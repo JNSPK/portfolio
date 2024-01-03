@@ -7,6 +7,31 @@
   justify-items: center;
   align-items: center;
   justify-self: center;
-  padding: 2rem 10rem;
+  padding: 2rem;
   gap: 2rem;
+}
+
+@media (max-width: $layout-bp-small) {
+  .projets-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    justify-self: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: $layout-bp-xsmall) {
+  .projets-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: $layout-bp-xxlarge) {
+  .projets-container {
+    max-width: 100rem;
+  }
 }

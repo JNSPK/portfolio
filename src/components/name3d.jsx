@@ -4,21 +4,31 @@ import { Center, Text3D, Float } from '@react-three/drei';
 import { useRef } from 'react';
 
 const CustomMesh = () => {
-  const ref = useRef();
   const { pointer } = useThree();
+  const meshRef = useRef();
 
-  useFrame(() => {
+  useFrame(({ size }) => {
+    const { width } = size;
+    const scaleFactor = 2000;
+    const newScale = width / scaleFactor;
+    meshRef.current.scale.set(newScale, newScale);
+
+    const newGroupPosition = 1.5 * (2 / newScale);
+    meshRef.current.position.set(newGroupPosition, 2, 2);
+
     if (pointer) {
       const { x, y } = pointer;
-      ref.current.rotation.x = y / -15;
-      ref.current.rotation.y = x / 15;
+      meshRef.current.rotation.x = y / -15;
+      meshRef.current.rotation.y = x / 15;
     }
   });
+
+  console.log(meshRef);
 
   return (
     <>
       <Center>
-        <group ref={ref} position={(-8, -10, 2)}>
+        <group ref={meshRef} position={(-8, -10, 2)}>
           <Float
             speed={2} // Animation speed, defaults to 1
             rotationIntensity={0.8} // XYZ rotation intensity, defaults to 1
@@ -107,11 +117,11 @@ const Scene = () => {
 
 const Name3d = () => {
   return (
-    <>
+    <div className='canvas-container'>
       <Canvas orthographic camera={{ position: [-1, 0, 5], zoom: 50 }}>
         <Scene />
       </Canvas>
-    </>
+    </div>
   );
 };
 

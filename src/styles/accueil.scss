@@ -10,3 +10,11 @@
     height: 100%;
   }
 }
+
+@media (max-width: $layout-bp-small) {
+  .accueil {
+    .container {
+      width: 100vw;
+    }
+  }
+}

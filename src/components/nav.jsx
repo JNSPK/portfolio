@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import github from '../img/github.png';
 import linkedin from '../img/linkedin.png';
+import Media from 'react-media';
 
 const Nav = () => {
   const [showNav, setShowNav] = useState(false);
@@ -13,37 +14,49 @@ const Nav = () => {
 
   return (
     <header className={`header ${showNav ? 'active' : 'inactive'}`}>
-      <section className='logo-header'>
-        <p className='name-header'>Johan Nilsson</p>
-      </section>
+      <Media queries={{ small: '(max-width : 720px)' }}>
+        {(matches) =>
+          matches.small ? (
+            ''
+          ) : (
+            <section className='logo-header'>
+              <p className='name-header'>Johan Nilsson</p>
+            </section>
+          )
+        }
+      </Media>
       <button className='mobile-burger' onClick={handleShowNav}></button>
       <nav className={`navbar ${showNav ? 'active' : 'inactive'}`}>
         <NavLink
           to='/'
           className={({ isActive, isPending }) =>
             isPending ? 'pending' : isActive ? 'active' : ''
-          }>
+          }
+          onClick={handleShowNav}>
           Accueil
         </NavLink>
         <NavLink
           to='/stack'
           className={({ isActive, isPending }) =>
             isPending ? 'pending' : isActive ? 'active' : ''
-          }>
+          }
+          onClick={handleShowNav}>
           Stack
         </NavLink>
         <NavLink
           to='/projets'
           className={({ isActive, isPending }) =>
             isPending ? 'pending' : isActive ? 'active' : ''
-          }>
+          }
+          onClick={handleShowNav}>
           Projets
         </NavLink>
         <NavLink
           to='/a-propos'
           className={({ isActive, isPending }) =>
             isPending ? 'pending' : isActive ? 'active' : ''
-          }>
+          }
+          onClick={handleShowNav}>
           À Propos
         </NavLink>
         <a
