@@ -23,15 +23,14 @@ const data = [
     demoLink:'https://jnspk.github.io/Melody',
     description:'Mon premier projet Angular\nPage monoproduit avec un panier interactif ou les quantités peuvent être modifiées ce qui impacte le total restant dû.',
     img: Melody,
+  },  {
+    name: 'Kasa',
+    repoLink: 'https://github.com/JNSPK/P11-KASA',
+    demoLink: 'https://jnspk.github.io/P11-KASA',
+    description: "Application React pour un site de location d'appartement",
+    img: Kasa,
   },
-  {
-    name: 'GameOn',
-    repoLink: 'https://github.com/JNSPK/P4-GameOn-website-FR',
-    demoLink: 'https://jnspk.github.io/P4-GameOn-website-FR',
-    description:
-      "Gestion d'un formulaire en modale avec Regex pour la vérification des champs",
-    img: GameOn,
-  },
+
   {
     name: 'FishEye',
     repoLink: 'https://github.com/JNSPK/P6-OC-Front-End-Fisheye',
@@ -49,25 +48,26 @@ const data = [
     img: PetitsPlats,
   },
   {
-    name: 'Billed',
-    repoLink: 'https://github.com/JNSPK/P9-SAASRH',
-    description: 'Débug et tests unitaires sur un système de note de frais',
-    img: Billed,
-  },
-  {
-    name: 'Kasa',
-    repoLink: 'https://github.com/JNSPK/P11-KASA',
-    demoLink: 'https://jnspk.github.io/P11-KASA',
-    description: "Application React pour un site de location d'appartement",
-    img: Kasa,
-  },
-  {
     name: 'SportSee',
     repoLink: 'https://github.com/JNSPK/P12-Sportsee',
     description:
       "Tableau de bord analytique d'application sportive en React avec Recharts",
     img: SportSee,
   },
+  {
+    name: 'Billed',
+    repoLink: 'https://github.com/JNSPK/P9-SAASRH',
+    description: 'Débug et tests unitaires sur un système de note de frais',
+    img: Billed,
+  },  {
+    name: 'GameOn',
+    repoLink: 'https://github.com/JNSPK/P4-GameOn-website-FR',
+    demoLink: 'https://jnspk.github.io/P4-GameOn-website-FR',
+    description:
+      "Gestion d'un formulaire en modale avec Regex pour la vérification des champs",
+    img: GameOn,
+  },
+
   {
     name: 'ArgentBank',
     repoLink: 'https://github.com/JNSPK/Argent-Bank',
