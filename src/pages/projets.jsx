@@ -7,8 +7,23 @@ import Billed from '../img/preview/Billed.png';
 import Kasa from '../img/preview/Kasa.png';
 import SportSee from '../img/preview/SportSee.png';
 import ArgentBank from '../img/preview/ArgentBank.png';
+import Brutalism from '../img/preview/brutalism.png';
+import Melody from '../img/preview/melody.png';
 
 const data = [
+  {
+    name : 'Brutalism',
+    repoLink:'https://github.com/JNSPK/Brutalism',
+    demoLink:'https://jnspk.github.io/Brutalism/',
+    description:'L\'histoire du brutalism : de l\'architecture au webdesign.\nProjet personnel',
+    img: Brutalism,
+  }, {
+    name : 'Melody',
+    repoLink:'https://github.com/JNSPK/Melody',
+    demoLink:'https://jnspk.github.io/Melody',
+    description:'Mon premier projet Angular\nPage monoproduit avec un panier interactif ou les quantités peuvent être modifiées ce qui impacte le total restant dû.',
+    img: Melody,
+  },
   {
     name: 'GameOn',
     repoLink: 'https://github.com/JNSPK/P4-GameOn-website-FR',

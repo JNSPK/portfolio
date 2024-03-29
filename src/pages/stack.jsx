@@ -4,11 +4,13 @@ import html from '../img/html5.png';
 import css from '../img/css3.png';
 import js from '../img/js.png';
 import react from '../img/react.png';
+import angular from '../img/angular.png';
 import sass from '../img/sass.png';
 import three from '../img/three.svg';
 import typescript from '../img/typescript.png';
 import figma from '../img/figma.png';
 import mongoDb from '../img/mongodb.png';
+import supabase from '../img/supabase-logo-icon.png';
 
 const Stack = () => {
   return (
@@ -34,9 +36,14 @@ const Stack = () => {
         niveau='Confirmé'
         tags={['Openclassrooms']}></Card>
       <Card
+        name='Angular.js'
+        src={angular}
+        niveau='Débutant'
+        tags={['Personnel']}></Card>
+      <Card
         name='Sass'
         src={sass}
-        niveau='Intermédiaire'
+        niveau='Confirmé'
         tags={['Openclassrooms']}></Card>
       <Card
         name='Typescript'
@@ -58,6 +65,11 @@ const Stack = () => {
         src={mongoDb}
         niveau='Débutant'
         tags={['Openclassrooms']}></Card>
+            <Card
+        name='Supabase'
+        src={supabase}
+        niveau='Débutant'
+        tags={['Personnel']}></Card>
     </div>
   );
 };
